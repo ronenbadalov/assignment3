@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/1da10781ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-close">&times;</span>
+          <h2 class="modal-title">Add a New Site</h2>
+        </div>
+        <hr class="modal-devider" />
+        <div class="modal-body">
+          <form spellcheck="false">
+            <div class="input-container">
+              <label class="form-label" for="title"
+                >Title <span class="input-required">*</span></label
+              >
+              <input
+                placeholder="Enter Your Site Title Here"
+                class="form-input form-input-title"
+                type="text"
+                id="title"
+                name="title"
+              />
+            </div>
+            <div class="input-container">
+              <label class="form-label" for="image"
+                >Image Url <span class="input-required">*</span></label
+              >
+              <input
+                placeholder="Paste Image Url Here"
+                class="form-input form-input-image"
+                type="text"
+                id="image"
+                name="image"
+              />
+            </div>
+            <div class="input-container">
+              <label class="form-label" for="description"
+                >Description <span class="input-required">*</span></label
+              >
+              <textarea
+                placeholder="Enter A Few Sentences About Your Site..."
+                class="form-input form-input-description"
+                id="description"
+                name="description"
+                rows="4"
+                cols="50"
+                spellcheck="false"
+              ></textarea>
+            </div>
+            <input class="submitBtn" type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
