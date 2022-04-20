@@ -10,7 +10,10 @@ app.use(cors());
 
 app.use("/src", express.static("./src/"));
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb+srv://ronen263:LyUigUqYnQh1PA72@cluster0.nqksb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  { useNewUrlParser: true }
+);
 const db = mongoose.connection;
 db.on("error", (err) => console.log(err));
 db.once("open", () => console.log("Connected To Database"));
