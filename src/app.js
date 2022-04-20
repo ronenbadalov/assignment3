@@ -127,7 +127,7 @@ const handleModal = () => {
 
 const renderSite = async (siteID) => {
   document.querySelector(".home")?.remove();
-  document.querySelector(".site")?.remove();
+  document.querySelectorAll(".site")?.forEach((siteEl) => siteEl.remove());
   document.querySelector(".notfound")?.remove();
   const data = await getSite(siteID);
   let html = "";
