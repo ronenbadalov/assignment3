@@ -127,9 +127,9 @@ const handleModal = () => {
 
 const renderSite = async (siteID) => {
   document.querySelector(".home")?.remove();
-  document.querySelectorAll(".site")?.forEach((siteEl) => siteEl.remove());
   document.querySelector(".notfound")?.remove();
   const data = await getSite(siteID);
+  document.querySelectorAll(".site")?.forEach((siteEl) => siteEl.remove());
   let html = "";
   if (!data._id) {
     html += ` <div class="notfound"><h1>Site not found!</h1><lottie-player
