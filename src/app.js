@@ -133,7 +133,7 @@ const renderSite = async (siteID) => {
   let html = "";
   if (!data._id) {
     html += ` <div class="notfound"><h1>Site not found!</h1><lottie-player
-    src="../assets/notfound.json"
+    src="https://assets4.lottiefiles.com/packages/lf20_a3kesdek.json"
     background="transparent"
     speed="2"
     style="width: 60vh;margin: auto;"
