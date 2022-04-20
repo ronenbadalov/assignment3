@@ -1,11 +1,13 @@
+const PORT = 5000;
+
 const getSites = async () => {
-  const res = await fetch("http://127.0.0.1:3000/sites");
+  const res = await fetch(`http://127.0.0.1:${PORT}/sites`);
   const data = res.json();
   return data;
 };
 
 const getSite = async (id) => {
-  const res = await fetch(`http://127.0.0.1:3000/sites/${id}`);
+  const res = await fetch(`http://127.0.0.1:${PORT}/sites/${id}`);
   const data = res.json();
   return data;
 };
@@ -18,7 +20,7 @@ const postSite = async (site) => {
       "Content-Type": "application/json",
     },
   };
-  const res = await fetch("http://127.0.0.1:3000/sites", options);
+  const res = await fetch(`http://127.0.0.1:${PORT}/sites`, options);
   return res;
 };
 
@@ -29,7 +31,7 @@ const deleteSite = async (id) => {
       "Content-Type": "application/json",
     },
   };
-  const res = await fetch(`http://127.0.0.1:3000/sites/${id}`, options);
+  const res = await fetch(`http://127.0.0.1:${PORT}/sites/${id}`, options);
   return res;
 };
 

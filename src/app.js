@@ -130,7 +130,6 @@ const renderSite = async (siteID) => {
   document.querySelector(".site")?.remove();
   document.querySelector(".notfound")?.remove();
   const data = await getSite(siteID);
-  console.log(data);
   let html = "";
   if (!data._id) {
     html += ` <div class="notfound"><h1>Site not found!</h1><lottie-player
@@ -148,7 +147,6 @@ const renderSite = async (siteID) => {
      <p class="site-description">${data.description}</p>
    </div>`;
   }
-  console.log(data.description);
   document.querySelector("#root").insertAdjacentHTML("beforeend", html);
 };
 

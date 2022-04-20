@@ -11,11 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "lottie-web": "^5.9.2",
     "mongoose": "^5.5.7"
   },
   "devDependencies": {
-    "dotenv": "^16.0.0",
     "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "14.18.1"
   }
 }
